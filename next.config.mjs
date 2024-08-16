@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output:"export",
+    output:"build",
     images: {
-        domains: ['firebasestorage.googleapis.com'], // Add the domain of your image source here
+        domains: ['firebasestorage.googleapis.com'],
     },
 };
 

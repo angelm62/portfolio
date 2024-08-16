@@ -23,11 +23,12 @@ import {SiTailwindcss,
         SiOpenai,
         SiTensorflow,
         SiIbmwatson,
-        SiKeras} from "react-icons/si";
+        SiKeras,
+        SiOpencv} from "react-icons/si";
 
 import { TbApi } from "react-icons/tb";
 
-import { VscAzureDevops } from "react-icons/vsc";
+import { VscAzure, VscAzureDevops } from "react-icons/vsc";
 
 
 const about ={
@@ -132,8 +133,52 @@ const skills = {
     description: "",
     items : [
         {
+            icon: <SiPowerbi />,
+            name: "PowerBI",
+        },
+        {
+            icon: <SiZapier />,
+            name: "Zapier",
+        },
+        {
             icon: <FaPython />,
             name: "Python",
+        },
+        {
+            icon: <SiTensorflow />,
+            name: "Tensorflow",
+        },
+        {
+            icon: <SiKeras />,
+            name: "Keras",
+        },
+        {
+            icon: <SiOpenai />,
+            name: "OpenAI API",
+        },
+        {
+            icon: <SiOpencv />,
+            name: "OpenCV",
+        },
+        {
+            icon: <SiMicrosoftazure />,
+            name: "Azure",
+        },
+        {
+            icon: <SiAzuredevops />,
+            name: "Azure DevOps",
+        },
+        {
+            icon: <SiAzurefunctions />,
+            name: "Functions",
+        },
+        {
+            icon: <SiFirebase />,
+            name: "Firebase",
+        },
+        {
+            icon: <SiIbmwatson />,
+            name: "IBM Watson",
         },
         {
             icon: <FaSalesforce />,
@@ -154,6 +199,10 @@ const skills = {
         {
             icon: <FaNodeJs />,
             name: "node.js",
+        },
+        {
+            icon: <SiTailwindcss />,
+            name: "Tailwind.css",
         },
         {
             icon: <FaFigma />,

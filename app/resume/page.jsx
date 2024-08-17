@@ -70,7 +70,7 @@ const about ={
 const experience ={
     icon: '/assets/resume/badge.svg',
     title: 'My Experience',
-    description: "Collected business requirements to develop advanced data mining solutions, enhancing sales by 15%. Designed and implemented ETL pipelines using Python and SQL, integrating data from call center platforms with Power BI. /n Created and deployed Power BI dashboards for various organizational operations, saving 20 weekly operative hours. Developed and implemented a customer segmentation strategy for a new e-commerce site, increasing sales by 12%. Automated customer service processes, reducing response times by 60% and improving customer satisfaction.",
+    description: "Throughout my career, I've applied my expertise in Data Science and Machine Learning across various industries, delivering innovative solutions that drive business success. I have a proven track record in developing and automating data-driven processes, creating impactful dashboards, and collaborating with cross-functional teams to achieve strategic goals. My experience spans from optimizing sales pipelines to enhancing operational efficiency, always focusing on adding value and solving complex challenges.",
     items : [
         {
             company: "Provincial Smart Home Services.",
@@ -230,9 +230,9 @@ const Resume = () => {
             initial={{opacity: 0}}
             animate={{
                 opacity: 1,
-                transition: { delay: 2.4, duration: 0.4, ease: "easeIn"},
+                transition: { delay: 0.4, duration: 0.4, ease: "easeIn"},
             }}
-            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+            className="min-h-[80vh] flex items-center justify-center py-12 lg:py-0"
             >
                 <div className="container mx-auto">
                     <Tabs 
@@ -248,7 +248,7 @@ const Resume = () => {
                         <div className="min-h-[70vh] w-full">
                             {/**experience */}
                             <TabsContent value='experience' className="w=full">
-                                <div className="flex flex-col gap-[30px] text-centet xl:text-lef">
+                                <div className="flex flex-col gap-[30px] text-centet lg:text-lef">
                                     <h3 className="text-4xl font-bold ">{experience.title}</h3>
                                     <p className="max-w-[600px] text-withe/60 mx-auto lg:mx-0">{experience.description}</p>
                                     <ScrollArea className="h-[400px]">
@@ -275,7 +275,7 @@ const Resume = () => {
                             </TabsContent>
                             {/**education */}
                             <TabsContent value='education' className="w=full">
-                            <div className="flex flex-col gap-[30px] text-centet xl:text-lef">
+                            <div className="flex flex-col gap-[30px] text-centet lg:text-lef">
                                     <h3 className="text-4xl font-bold ">{education.title}</h3>
                                     <p className="max-w-[600px] text-withe/60 mx-auto lg:mx-0">{education.description}</p>
                                     <ScrollArea className="h-[400px]">
@@ -305,16 +305,17 @@ const Resume = () => {
                                 <div className="flex flex-col gap-[30px]">
                                     <div className="flex flex-col gap-[30px] text-center lg:text-left">
                                         <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                        <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                        <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
                                             {skills.description}
                                         </p>
                                     </div>
-                                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                    <ScrollArea className="h-[400px]">
+                                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
                                         {skills.items.map((skill, index) => {
                                             return <li key={index}>
                                                     <TooltipProvider delayDuration={100}>
                                                             <Tooltip>
-                                                                <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                                                <TooltipTrigger className="w-full h-[80px] bg-[#232329] rounded-xl flex justify-center items-center group">
                                                                     <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                                                         {skill.icon}
                                                                     </div>
@@ -327,6 +328,7 @@ const Resume = () => {
                                                 </li>;
                                         })}
                                     </ul>
+                                    </ScrollArea>
                                 </div>
                             </TabsContent>
                             {/**about */}
@@ -334,7 +336,7 @@ const Resume = () => {
                                 <div className="flex flex-col gap-[30px]">
                                     <h3 className="text-4xl font-bold">{about.title}</h3>
                                     <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">{about.description}</p>
-                                    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px] mx-auto lg:mx-0">
                                         {about.info.map((item,index)=>{
                                             return <li key={index} className="flex items-center justify-center lg:justify-start gap-4">
                                                 <span className="text-white/60">{item.fieldName}</span>

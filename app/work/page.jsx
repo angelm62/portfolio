@@ -18,21 +18,21 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const projects = [
     {
         num: "01",
-        category: "Fullstack",
-        title: "Portfolio",
-        description: "descriptin of the project here",
-        stack: [{ name: "React" }, { name: "Tailwind" }, { name: "next.js" }],
-        image: "/assets/work/thumb1.png",
-        live: "",
+        category: "BackEnd",
+        title: "Customer Portal API",
+        description: "Developed a robust API to connect Salesforce with a custom customer portal, leveraging Azure for deployment and Docker for containerization. Built with Python using FastAPI and Uvicorn, the API also integrates with Firebase for real-time data handling and MySQL for reliable data storage. This solution ensures seamless communication between systems, enhancing customer data management and user experience through efficient, real-time synchronization.",
+        stack: [{ name: "Python" }, { name: "FastAPI" }, { name: "Firebase" }, { name: "Azure" }, { name: "Docker" }],
+        image: "https://firebasestorage.googleapis.com/v0/b/portfolio-8b2e0.appspot.com/o/mypsh_app.png?alt=media&token=1e544296-6b59-4285-af50-b36ba0f32f6e",
+        live: "https://portal.provincialsmarthome.com/#/Start",
         github: "",
     },
     {
         num: "02",
-        category: "Backend",
-        title: "API",
-        description: "descriptin of the project here",
-        stack: [{ name: "Python" }, { name: "FastAPI" }, { name: "Azure" }],
-        image: "/assets/work/thumb2.png",
+        category: "Automated Welding Cell",
+        title: "Project Engineer",
+        description: "Automated welding processes, increasing production efficiency by 25%.",
+        stack: [{ name: "InformYaskawa" }, { name: "PLC" }],
+        image: "https://firebasestorage.googleapis.com/v0/b/portfolio-8b2e0.appspot.com/o/pemarsa_show.png?alt=media&token=a0ae6a99-724e-4c50-8d2c-9eb9ffbf5826",
         live: "",
         github: "",
     },
@@ -53,7 +53,7 @@ const Work = () => {
         <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1,
-                        animate:{delay:2.4, duration: 0.4, ease:"easeIn"}
+                        animate:{delay:0.4, duration: 0.4, ease:"easeIn"}
              }}
             className='nim-h-[80px] flex flex-col justify-center py-12 lg:px-0'
         >
@@ -66,7 +66,7 @@ const Work = () => {
                                 {project.num}
                             </div>
                             {/**project category */}
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                             {/**Project description */}
                             <p className='text-white/60'>{project.description}</p>
                             {/** stack */}
@@ -117,17 +117,21 @@ const Work = () => {
                         <Swiper spaceBetween={30} slidesPerView={1} className='lg:h-[520px] mb-12' onSlideChange={handleSlideChange}>
                             {projects.map((project, index) => {
                                 return <SwiperSlide key={index} className='w-full'>
-                                    <div className='h-[460px] relative group flex justify-center item-center bg-pink-50/20'>
+                                    <div className='h-[460px] relative group flex justify-center item-center '>
                                         {/**overlay */}
-                                        <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'></div>
+                                        <div className='absolute top-0 bottom-0 w-full h-full  z-10'></div>
                                         {/**image */}
-                                        <div className='relative w-full h-full'>
-                                            <Image
+                                        <div className='relative w-full h-full rounded-xl overflow-hidden'>
+                                        <img
+                                            src={project.image}
+                                            alt="Description"
+                                        />
+                                            {/*<Image
                                                 src={project.image}
                                                 fill
                                                 className='object-cover'
                                                 alt=""
-                                            />
+                                            />*/}
                                         </div>
                                     </div>
                                 </SwiperSlide>

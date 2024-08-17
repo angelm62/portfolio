@@ -33,20 +33,20 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={{
                 opacity: 1,
-                animate: { delay: 2.4, duration: 0.4, ease: "easeIn" }
+                animate: { delay: 0.4, duration: 0.4, ease: "easeIn" }
             }}
-            className='py-12'>
+            className='py-6'>
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row gap-[30px]">
                     {/**form */}
-                    <div className="lg:w-[54%] order-2 lg:order-none">
-                        <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-lg">
+                    <div className="lg:h-[34%] order-2 lg:order-none">
+                        <form className="flex flex-col gap-4 p-10 bg-[#27272c] rounded-lg">
                             <h3 className="text-4xl text-accent">Lets work together</h3>
                             <p className="text-white/60">
-                                Lore, ipsum dolor sit
+                            Share your project details, and I&apos;ll get back to you soon!
                             </p>
                             {/**input */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <Input type='firstname' placeholder="Firstname" />
                                 <Input type='lastname' placeholder="Lastname" />
                                 <Input type='email' placeholder="Email address" />
@@ -60,9 +60,11 @@ const Contact = () => {
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Select a service</SelectLabel>
-                                        <SelectItem value="est">Back-End Developer</SelectItem>
-                                        <SelectItem value="cst">Data Scientist</SelectItem>
-                                        <SelectItem value="mst">Bussiness Analyst</SelectItem>
+                                        <SelectItem value="bed">Back-End Developer</SelectItem>
+                                        <SelectItem value="ds">Data Scientist</SelectItem>
+                                        <SelectItem value="ba">Bussiness Analyst</SelectItem>
+                                        <SelectItem value="cst">Software developer</SelectItem>
+                                        <SelectItem value="mst">Web developer</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
@@ -78,12 +80,12 @@ const Contact = () => {
                             {info.map((item, index) => {
                                 return (
                                     <li key={index} className="flex items-center gap-6">
-                                        <div className="w-[52px] h-[52px] lg:w-[72px] lg:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                                            <div className="text-[28px]">{item.icon}</div>
+                                        <div className="w-[48px] h-[48px] lg:w-[72px] lg:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                                            <div className="text-[24px]">{item.icon}</div>
                                         </div>
                                         <div className="flex-1">
                                             <p className="text-white/60">{item.title}</p>
-                                            <h3 className="text-xl">{item.description}</h3>
+                                            <h3 className="text-lg lg:text-xl">{item.description}</h3>
                                         </div>
                                     </li>
                                 );

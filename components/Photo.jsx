@@ -21,11 +21,11 @@ const Photo = () => {
                       transition: { delay: 1.4, duration: 0.4, ease:"easeInOut"},
                   }}
                   className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten shadow-inner[0_0_20px_20px_rgba(0,0,0,0.3)] absolute">
-            
-                <img
+                    <img
                     src="https://firebasestorage.googleapis.com/v0/b/portfolio-8b2e0.appspot.com/o/angel.png?alt=media&token=b86395dc-2c49-4a44-806e-4c33ff394fdf"
                     alt="Description"
                 />
+                
             </motion.div>
             {/**Circle */}
             <motion.svg 

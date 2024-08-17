@@ -8,31 +8,31 @@ const services = [
     {
         num: '01',
         title: 'Data Scientist',
-        description: 'Developed comprehensive reports using Power BI, integrating five years of sales data and seven-day forecasts. Applied linear regression and ARIMA modeling for sales forecasting, reducing inventory costs. Communicated findings to non-technical stakeholders, supporting strategic decision-making.',
+        description: '',
         href: ""
     },
     {
         num: '02',
         title: 'Bussiness analyst',
-        description: 'Developed comprehensive reports using Power BI, integrating five years of sales data and seven-day forecasts. Applied linear regression and ARIMA modeling for sales forecasting, reducing inventory costs. Communicated findings to non-technical stakeholders, supporting strategic decision-making.',
+        description: '',
         href: ""
     },
     {
         num: '03',
         title: 'Artifitial Intelligence & Machine Learning',
-        description: 'Developed comprehensive reports using Power BI, integrating five years of sales data and seven-day forecasts. Applied linear regression and ARIMA modeling for sales forecasting, reducing inventory costs. Communicated findings to non-technical stakeholders, supporting strategic decision-making.',
+        description: '',
         href: ""
     },
     {
         num: '04',
         title: 'Software development',
-        description: 'Developed comprehensive reports using Power BI, integrating five years of sales data and seven-day forecasts. Applied linear regression and ARIMA modeling for sales forecasting, reducing inventory costs. Communicated findings to non-technical stakeholders, supporting strategic decision-making.',
+        description: '',
         href: ""
     },
     {
         num: '05',
         title: 'Web Development',
-        description: 'Developed comprehensive reports using Power BI, integrating five years of sales data and seven-day forecasts. Applied linear regression and ARIMA modeling for sales forecasting, reducing inventory costs. Communicated findings to non-technical stakeholders, supporting strategic decision-making.',
+        description: '',
         href: ""
     },
    
@@ -46,7 +46,7 @@ const Services = () => {
                     initial={{ opacity: 0}}
                     animate={{
                         opacity: 1,
-                        transition: { delay: 2.4, duration: 0.4, ease: "easeIn"},
+                        transition: { delay: 0.4, duration: 0.4, ease: "easeIn"},
                     }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
                     >

@@ -76,12 +76,13 @@ const Work = () => {
                 opacity: 1,
                 animate: { delay: 0.4, duration: 0.4, ease: "easeIn" }
             }}
-            className='min-h-[80px] flex flex-col justify-center py-6 lg:px-16'
+            className='min-h-[80px] flex flex-col justify-center py-6 lg:px-16 m-6'
+            id="work"
         >
             <div className='container mx-auto'>
                 <h2 className="text-4xl font-bold justify-center">My Work</h2>
                 <div className='flex flex-col lg:flex-row lg:gap-[30px] py-6'>
-                    <div className='w-full lg:w-[50%] lg:h-[460px] flex flex-col lg:justify-between order-2 lg:order-none'>
+                    <div className='w-full lg:w-[50%] flex flex-col lg:justify-between order-2 lg:order-none'>
                         <div className='flex flex-col gap-[30px] h-[50%]'>
                             {/**Outline num */}
                             <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>
@@ -90,7 +91,7 @@ const Work = () => {
                             {/**project category */}
                             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                             {/**Project description */}
-                            <p className='text-white/60'>{project.description}</p>
+                            <p className='text-white/60 '>{project.description}</p>
                             {/** stack */}
                             <div className='container mx-auto p-4'>
                             <ul className='flex gap-4 flex-wrap'>

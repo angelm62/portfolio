@@ -47,24 +47,11 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-      {
-        /**
-          
-        <div className="">
-        <Resume />
-      </div>
-      <div className="">
-        <Work />
-      </div>
-      <div className="">
-        <Contact />
-      </div>
-         */
-      }
-     
-    </section>
-  
+      <Resume/>
+      <Work />
+      <Contact />
 
+    </section>
   );
 };
 

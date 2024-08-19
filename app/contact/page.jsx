@@ -74,7 +74,9 @@ const Contact = () => {
                 opacity: 1,
                 animate: { delay: 0.4, duration: 0.4, ease: "easeIn" }
             }}
-            className='py-6'>
+            className='py-6 mt-12'
+            id= "contact"
+            >
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row gap-[30px]">
                     {/**form */}

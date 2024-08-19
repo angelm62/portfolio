@@ -70,7 +70,7 @@ const about ={
 const experience ={
     icon: '/assets/resume/badge.svg',
     title: 'My Experience',
-    description: "Throughout my career, I've applied my expertise in Data Science and Machine Learning across various industries, delivering innovative solutions that drive business success. I have a proven track record in developing and automating data-driven processes, creating impactful dashboards, and collaborating with cross-functional teams to achieve strategic goals. My experience spans from optimizing sales pipelines to enhancing operational efficiency, always focusing on adding value and solving complex challenges.",
+    description: "",
     items : [
         {
             company: "Provincial Smart Home Services.",
@@ -235,17 +235,25 @@ const Resume = () => {
             className="min-h-[80vh] flex items-center justify-center py-12 lg:py-0"
             >
                 <div className="container mx-auto">
+                <div>
+                    <h3 className="text-4xl font-bold ">
+                        About me
+                    </h3>
+                    <p className="py-4">Throughout my career, I've applied my expertise in Data Science and Machine Learning across various industries, delivering innovative solutions that drive business success. I have a proven track record in developing and automating data-driven processes, creating impactful dashboards, and collaborating with cross-functional teams to achieve strategic goals. My experience spans from optimizing sales pipelines to enhancing operational efficiency, always focusing on adding value and solving complex challenges.</p>
+                </div >
                     <Tabs 
                     defaultValue="experience"
-                    className="flex flex-col lg:flex-row gap-[60px]">
+                    className="flex flex-col lg:flex-row gap-[60px] py-6">
                         <TabsList className="flex flex-col w-full max-w-[380px] mx-auto lg:mx-0 gap-6">
                             <TabsTrigger value="experience">Experience</TabsTrigger>
                             <TabsTrigger value="education">Education</TabsTrigger>
                             <TabsTrigger value="skills">Skills</TabsTrigger>
                             <TabsTrigger value="about">About me</TabsTrigger>
+                            
                         </TabsList>
+                        
                         {/**Content */}
-                        <div className="min-h-[70vh] w-full">
+                        <div className="min-h-[50vh] w-full">
                             {/**experience */}
                             <TabsContent value='experience' className="w=full">
                                 <div className="flex flex-col gap-[30px] text-centet lg:text-lef">

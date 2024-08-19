@@ -24,13 +24,19 @@ module.exports = {
     },
     extend: {
       colors:{
+        primary: '#17181D',
+        accent: {
+          DEFAULT: "#007acc",
+          hover: "#0098ff"
+        },
+
+      },
+      /**   colors:{
         primary: '#1f1f1f',
         accent: {
           DEFAULT: "#00ff99",
           hover: "#00e187"
-        },
-
-      },
+        }, */
       /** primary: '#1c1c22'
        *            #9cdcff,
         accent: {

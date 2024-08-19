@@ -5,6 +5,9 @@ import Link from "next/link";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Resume from "@/app/resume/page";
+import Work from "@/app/work/page";
+import Contact from "@/app/contact/page";
 
 const Home = () => {
   return (
@@ -44,7 +47,24 @@ const Home = () => {
         </div>
       </div>
       <Stats />
+      {
+        /**
+          
+        <div className="">
+        <Resume />
+      </div>
+      <div className="">
+        <Work />
+      </div>
+      <div className="">
+        <Contact />
+      </div>
+         */
+      }
+     
     </section>
+  
+
   );
 };
 

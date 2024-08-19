@@ -8,6 +8,9 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
+import { useState } from "react";
+import emailjs from "emailjs-com";
+
 const info = [
     {
         icon: <FaPhoneAlt />,
@@ -28,6 +31,42 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+
+    const [formData, setFormData] = useState({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    };
+
+    const targetUrl = 'https://hooks.zapier.com/hooks/catch/19851431/26thabk/';
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch( targetUrl, {
+                method: 'POST',
+                mode: "cors",
+                body: JSON.stringify(formData),
+            });
+
+            const resp = await response.json();
+            console.log(resp);
+            } catch (e) {
+            console.log(e);
+            }
+    };
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -40,25 +79,26 @@ const Contact = () => {
                 <div className="flex flex-col lg:flex-row gap-[30px]">
                     {/**form */}
                     <div className="lg:h-[34%] order-2 lg:order-none">
-                        <form className="flex flex-col gap-4 p-10 bg-[#27272c] rounded-lg">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-10 bg-[#27272c] rounded-lg">
                             <h3 className="text-4xl text-accent">Lets work together</h3>
                             <p className="text-white/60">
                             Share your project details, and I&apos;ll get back to you soon!
                             </p>
                             {/**input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <Input type='firstname' placeholder="Firstname" />
-                                <Input type='lastname' placeholder="Lastname" />
-                                <Input type='email' placeholder="Email address" />
-                                <Input type='phone' placeholder="Phone number" />
+                                <Input name='firstname' placeholder="Firstname" value={formData.firstname} onChange={handleChange}/>
+                                <Input name='lastname' placeholder="Lastname" value={formData.lastname} onChange={handleChange}/>
+                                <Input name='email' placeholder="Email address" value={formData.email} onChange={handleChange}/>
+                                <Input name='phone' placeholder="Phone number" value={formData.phone} onChange={handleChange}/>
                             </div>
                             {/**Select */}
-                            <Select>
+                            <Select name="service" value={formData.service} onChange={handleChange}>
                                 <SelectTrigger className='w-full'>
                                     <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
+                                        
                                         <SelectLabel>Select a service</SelectLabel>
                                         <SelectItem value="bed">Back-End Developer</SelectItem>
                                         <SelectItem value="ds">Data Scientist</SelectItem>
@@ -69,9 +109,12 @@ const Contact = () => {
                                 </SelectContent>
                             </Select>
                             {/**textarea */}
-                            <Textarea className="h-[200px]"
-                                placeholder="Type your message here" />
-                            <Button size="md" className="max-w-40">Send message</Button>
+                            <Textarea   name="message"
+                                        className="h-[200px]"
+                                        placeholder="Type your message here"
+                                        value={formData.message}
+                                        onChange={handleChange} />
+                            <Button type="submit" size="md" className="max-w-40">Send message</Button>
                         </form>
                     </div>
                     {/**info */}
